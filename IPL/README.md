@@ -2,7 +2,8 @@ This project is about IPL bidding on an app, and I've derived the insights from 
 
 ### Schema and Data
 
-Run [IPL Schema & Data Dump](https://github.com/d0r1h/SQL/blob/main/IPL/IPL%20Schema%20%26%20Data%20Dump.sql) script to create schema and dump data into. 
+* Run [IPL Schema & Data Dump](https://github.com/d0r1h/SQL/blob/main/IPL/IPL%20Schema%20%26%20Data%20Dump.sql) script to create schema and dump data into. 
+* [tables.md](https://github.com/d0r1h/SQL/blob/main/IPL/tables.md) file contains the table structure and information about the columns. 
 
 IPL schema has following 12 tables:
 
@@ -20,6 +21,12 @@ IPL schema has following 12 tables:
 12. Team Standings
 
 
+### ER Diagram
+
+<h3 align="center">
+    <a><img src="https://github.com/d0r1h/SQL/blob/main/IPL/ER_IPL.png", width="850"></a>
+</h3>
+
 ### Insights  
 
 1. The percentage of wins of each bidder in the order of highest to lowest percentage.
@@ -32,9 +39,3 @@ IPL schema has following 12 tables:
 8. How many all-rounders are there in each team, display the teams with more than 4 all-rounder in descending order.  
 
 [solution.sql](https://github.com/d0r1h/SQL/blob/main/IPL/solution.sql) script contains the answers for above questions 
-
-### ER Diagram
-
-<h3 align="center">
-    <a><img src="https://github.com/d0r1h/SQL/blob/main/IPL/ER_IPL.png", width="850"></a>
-</h3>

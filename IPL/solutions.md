@@ -1,4 +1,4 @@
-1. The percentage of wins of each bidder in the order of highest to lowest percentage.
+#### 1. The percentage of wins of each bidder in the order of highest to lowest percentage.
 
 ```sql
 select IBD.BIDDER_ID, IBD.BIDDER_NAME, (bd_won.wins/no_of_bids)*100 as Percentage_of_Wins
@@ -15,7 +15,7 @@ group by IBD.BIDDER_ID, IBD.BIDDER_NAME
 order by Percentage_of_Wins desc;
 ```
 
-2. The number of matches conducted at each stadium with stadium name, city from the database.
+#### 2. The number of matches conducted at each stadium with stadium name, city from the database.
 
 ```sql
 select STADIUM_NAME, CITY, `Count of match` from (
@@ -27,7 +27,7 @@ on t.STADIUM_ID  = IPS.STADIUM_ID
 order by `Count of match`;
 ```
 
-3. In a given stadium, what is the percentage of wins by a team which has won the toss?
+#### 3. In a given stadium, what is the percentage of wins by a team which has won the toss?
 
 
 ```sql
@@ -53,7 +53,7 @@ ON ttt.STADIUM_ID = IPLS.STADIUM_ID
 order by STADIUM_ID, MATCH_WINNER;
 ```
 
-4. The total bids along with bid team and team name.
+#### 4. The total bids along with bid team and team name.
 
 ```sql
 select BID_TEAM,TEAM_NAME,`Total Bids`  
@@ -66,7 +66,7 @@ on tt.BID_TEAM = IT.TEAM_ID;
 ```
 
 
-5. The team id who won the match as per the win details.
+#### 5. The team id who won the match as per the win details.
 
 
 ```sql
@@ -81,7 +81,7 @@ join IPL_TEAM as IT
 on tt.TEAM_ID = IT.TEAM_ID;
 ```
 
-6. Total matches played, total matches won and total matches lost by team along with its team name.
+#### 6. Total matches played, total matches won and total matches lost by team along with its team name.
 
 ```sql
 select ITS.TEAM_ID, IT.TEAM_NAME, 
@@ -95,7 +95,7 @@ group by TEAM_ID;
 ```
 
 
-7. The bowlers for Mumbai Indians team.
+#### 7. The bowlers for Mumbai Indians team.
 
 ```sql
 select  ITP.TEAM_ID, IP.PLAYER_NAME, ITP.PLAYER_ROLE, ITP.REMARKS 
@@ -106,7 +106,7 @@ where PLAYER_ROLE = 'Bowler' and ITP.REMARKS = 'TEAM - MI';
 ```
 
 
-8. How many all-rounders are there in each team, display the teams with more than 4 all-rounder in descending order.
+#### 8. How many all-rounders are there in each team, display the teams with more than 4 all-rounder in descending order.
 
 
 ```sql
